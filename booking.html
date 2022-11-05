@@ -1,0 +1,367 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+      
+    />
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    
+    <title>Booking_Exp-trips</title>
+    <style>
+        .carousel-caption {
+    position: absolute;
+    right: 26%;
+    bottom: 1.25rem;
+    left: 29%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #196821;
+    text-align: center;
+    top: 6em;
+}
+    </style>
+</head>
+<body>
+    <!--Navbar Begins-->
+    <div class="container">
+        <header
+          class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuAoBCXXc-nqMfoe5MIwLq9VxXh5GitV604g&usqp=CAU"
+              width="90"
+              height="50"
+            />
+            <h3 style="font-family: fantasy">Experion-Trips</h3>
+          </a>
+  
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">Sign-Up</a></li>
+            <li class="nav-item">
+              <a
+                href="#"
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop2"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </header>
+      </div>
+      <!--Navbar Ends-->
+    
+
+    <!-- search bar begins -->
+     <div class="carousel-caption">
+    <table  cellpadding="7" style="border-color: rgb(255, 72, 0); border-style: hidden; background-color:  rgb(13 110 253);color: white; border-radius: 12px;" >
+            
+        <tr>
+           <td>
+              <label for="pick-up">Pick-Up Point</label>
+           </td>
+           <td>
+              <input type="text" id="pick-up" name="pick-up" placeholder="Enter your Pick-Up point">
+           </td>
+        </tr>
+        <tr>
+           <td>
+              <label for="drop-in">Destination</label>
+           </td>
+           <td>
+              <input type="text" id="drop-in" name="drop-in" placeholder="Enter your Destination">
+           </td>
+        </tr>
+        <tr>
+            <td>
+               <label for="nos:">No:of passengers</label>
+            </td>
+            <td>
+               <select id="nos:" id="nos:">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+               </select>
+            </td>
+         </tr>
+        <tr>
+           <td>
+              <label for="cabType">Cab Type</label>
+           </td>
+           <td>
+              <input type="radio" name="cabType1" id="cabType1" value="Normal">Normal
+              <input type="radio" name="cabType2" id="cabType2" value="Elite">Elite
+              <input type="radio" name="cabType3" id="cabType3" value="Premium">Premium
+              
+           </td>
+        </tr>
+        <tr>
+           <td>
+              <label for="Help Note"> Help Note </label>
+           </td>
+           <td>
+              <textarea name="Help Note" id="Help Note" cols="30" rows="10" placeholder="Do you want to tell anything to the car driver? Write it down here."></textarea>
+           </td>
+        </tr>
+        <tr>
+           <td>
+              <label for="DateOfJouney">Date of Journey-Pre Booking Available</label>
+              </td>
+              <td>
+              <input type="date" name="DateOfJourney" id="DateOfBirth">
+           </td>
+        </tr>
+        <tr>
+           <td>
+              <label for="Mobile">Mobile Number</label>
+           </td>
+           <td>
+              <input type="text" name="Mobile" id="Mobile" placeholder="Give your active contact number">
+           </td>
+        </tr>
+        <tr>
+           <td>
+              <label for="emailID">Email ID</label>
+           </td>
+           <td>
+              <input type="email" name="emailID" id="emailID" placeholder="We will provide new offers and discounts via email">
+           </td>
+        </tr>
+        
+        
+           <tr>
+              <td>
+                 <label for="contactPermission">Can we contact you</label>
+              </td>
+              <td>
+                 <input type="radio" name="contactPermission" id="contactPermission1" value="Yes">Yes
+                 <input type="radio" name="contactPermission" id="contactPermission2" value="No">No
+              </td>
+           </tr>
+           <tr>
+              <td>
+                 <label for="communicationPreference">Communication Preference</label>
+              </td>
+              <td>
+                 <input type="checkbox" name="communicationPreference" id="communicationPreference1" value="Email">Email
+                 <input type="checkbox" name="communicationPreference" id="communicationPreference2" value="SMS">SMS
+              </td>
+           </tr>
+           <tr>
+              <td colspan="2">
+                 <input type="checkbox" name="Trip-Confirmation" value="Trip-Confirmation">Confirm my <span style="color: blue;">Cab Booking </span> with Experion-Trips.
+              </td>
+           </tr>
+           <td colspan="2" align="center">
+            <a class="btn btn-lg btn-primary" href="payment.html" style="background-color: #196821;">Make Payment</a>
+      
+            <input class="btn btn-danger" type="reset" value="Reset" >
+           </td>
+        </tr>
+     </table>
+    <!-- search bar ends -->
+    <!--PopupBegins sign in-->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop2"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Please Sign-in
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+           
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <br />
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <br />
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me" /> Remember me
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Sign in
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Reset
+            </button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up end-sign in -->
+
+    <!-- pop up begins-sign up -->
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              New Registration
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+           
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput1"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput1">Email address</label>
+              </div>
+              <br />
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="floatingInput2"
+                  placeholder="Contact Number"
+                />
+                <label for="floatingInput2">Contact Number</label>
+              </div>
+              <br />
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword1"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <br />
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword2"
+                  placeholder="Confirm Password"
+                />
+                <label for="floatingPassword">Confirm Password</label>
+              </div>
+              <br />
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me" /> I Agree to Experion-Trips <span style="color: blue;"> Terms and Condition </span>
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Sign Up
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Reset
+            </button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pop up end-sign up -->
+    
+
+    
+    
+    
+    
+      
+</body>
+<script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"
+  ></script>
+
+</html>
